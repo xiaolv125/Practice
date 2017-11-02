@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var count=0,x,A,B,C;
+    for(var n=1000;n<=9999;n++){
+        if(n%13!=0) continue;
+        x=n;
+        A=Math.floor(x/1000);
+        x%=1000;
+        B=Math.floor(x/100);
+        x%=100;
+        C=Math.floor(x/10);
+        if(B+C==A){
+            count+=1;
+            document.write(n+" ");
+            if(count%10==0) document.write("</br>");
+        }
+    }
+    document.write("</br>");
+    document.write("共有"+count+"个数满足");
+</script>
+</body>
+</html>
