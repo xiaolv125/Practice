@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-6</title>
+</head>
+<body>
+<script>
+    //在页面上输出如下图案。
+    //    *
+    //   * *
+    //  * * *
+    // * * * *
+    //* * * * *
+    //其中，每行的星号"*"之间有一个空格间隔。
+    for(line=1;line<=5;line++){
+        for(kong=4;kong>=line;kong--){
+            document.write(" ");
+        }
+        for(xing=1;xing<=line;xing++){
+            document.write("* ");
+        }
+        document.write("</br>");
+    }
+//    var i,line;
+//    for(line=1;line<=5;line++)
+//    {
+//        document.write("    ");
+//        for(i=1;i<=line;i++)
+//        {
+//            document.write(i);
+//            if (i>0) document.write(" ");
+//        }
+//        document.write("<br>");
+//    }
+</script>
+</body>
+</html>
