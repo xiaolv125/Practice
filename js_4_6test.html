@@ -15,24 +15,29 @@
     //其中，每行的星号"*"之间有一个空格间隔。
     for(line=1;line<=5;line++){
         for(kong=4;kong>=line;kong--){
-            document.write(" ");
+            document.write("&nbsp");
         }
         for(xing=1;xing<=line;xing++){
-            document.write("* ");
+            document.write("*"+"&nbsp");
         }
         document.write("</br>");
     }
-//    var i,line;
-//    for(line=1;line<=5;line++)
-//    {
-//        document.write("    ");
-//        for(i=1;i<=line;i++)
-//        {
-//            document.write(i);
-//            if (i>0) document.write(" ");
-//        }
-//        document.write("<br>");
-//    }
+
+    //输出n=10 行 *
+    /*function bb(n) {
+        for(line=1;line<=n;line++){
+            for(kong=n-1;kong>=line;kong--){
+                document.write("&nbsp");
+            }
+            for(xing=1;xing<=line;xing++){
+                document.write("*"+"&nbsp");
+            }
+            document.write("</br>");
+        }
+    }
+    bb(10);*/
+
+
 </script>
 </body>
 </html>

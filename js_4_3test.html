@@ -7,11 +7,20 @@
 <body>
 <script>
     //编写程序，计算10!(即 1*2*3＊•…10）的结果(10的阶乘)。
-    var sum=1;
+    /*var sum=1;
     for(i=1;i<=10;i++){
         sum=sum*i;
     }
-    console.log("10！="+sum);    //3628800
+    console.log("10！="+sum);    //3628800*/
+
+    //函数的递归调用
+    function fac(n) {
+        if(n==1){
+            return 1;
+        }
+        return n * fac(n-1);
+    }
+    console.log(fac(10));
 //    var fac,i;
 //    fac=1;
 //    for(i=1;i<=10;i++) fac *= i;
