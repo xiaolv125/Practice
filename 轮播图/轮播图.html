@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 680px;
+            height: 344px;
+            margin: 50px auto;
+            position: relative;
+        }
+        #img-box img{
+            display: none;
+        }
+        #img-box .selected{
+            display: block;
+        }
+        #tab{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        #tab li{
+            width: 20px;
+            height: 20px;
+            background: #000;
+            color: #ffffff;
+            text-align: center;
+            line-height: 20px;
+            float: left;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        #tab li.selected{
+            background: orange;
+        }
+        #prev-btn,#next-btn{
+            position:absolute;
+            bottom: 10px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            background: #000;
+            color: #ffffff;
+        }
+        #prev-btn{
+            left: 10px;
+        }
+        #next-btn{
+            left: 35px;
+        }
+        span{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="img-box">
+            <img width="680px" height="344px" class="selected" src="IMG_4736.JPG" alt=""/>
+            <img width="680px" height="344px" src="IMG_4745.JPG" alt=""/>
+            <img width="680px" height="344px" src="IMG_4748.JPG" alt=""/>
+            <img width="680px" height="344px" src="下载.png" alt=""/>
+        </div>
+        <ul id="tab">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <span id="prev-btn">&lt;</span>
+        <span id="next-btn">&gt;</span>
+    </div>
+
+<script>
+   /* var aLi=document.getElementsByTagName('li');
+    var oContent=document.getElementById('img-box');
+    var aDiv=oContent.getElementsByTagName('div');
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].index=i;   //ali[0].index=0 ali[1].index=1 ali[2].index=2
+        aLi[i].onclick=function () {
+            for(var j=0;j<aLi.length;j++){
+                aLi[j].className='';//所有li的selected 去掉
+                aDiv[j].className='';//所有div的active 去掉
+            }
+            this.className="selected";  //当前点击的加selected
+            aDiv[this.index].className='active'; //找到与点击li索引对应的div 添加active
+        }
+    }*/
+
+    var oContainer=document.getElementById('container');
+    var oTab=document.getElementById('tab');
+    var aLi=oTab.getElementsByTagName('li');
+    var oImgBox=document.getElementById('img-box');
+    var aImg=oImgBox.getElementsByTagName('img');
+    var oNextBtn=document.getElementById('next-btn');
+    var oPrevBtn=document.getElementById('prev-btn');
+    var iNow=0;
+    var timer;
+
+    for(var i=o=0;i<aLi.length;i++){
+        aLi[i].index=i;
+        aLi[i].onmouseover=function () {
+           /* for(var j=0;j<aLi.length;j++){
+                aLi[j].className='';
+                aImg[j].className='';
+            }
+            this.className='selected';
+            aImg[this.index].className='selected';*/
+           iNow=this.index;
+           changeImg(this.index);
+        }
+    }
+    oNextBtn.onclick=function () {
+        iNow++;
+        if(iNow>=aImg.length){
+            iNow=0;
+        }
+        changeImg(iNow);
+        /*for(var j=0;j<aLi.length;j++){
+            aLi[j].className='';
+            aImg[j].className='';
+        }*/
+    }
+    oPrevBtn.onclick=function () {
+        iNow--;
+        if (iNow == -1) {
+            iNow = aImg.length - 1;
+        }
+       changeImg(iNow);
+    }
+        function changeImg(idx) {    //在函数中this指向window
+            for(var j=0;j<aLi.length;j++){
+                aLi[j].className='';
+                aImg[j].className='';
+            }
+            aLi[idx].className="selected";
+            aImg[idx].className="selected";
+        }
+
+        run();
+        oContainer.onmouseover=function () {
+            clearInterval(timer);
+        };
+        oContainer.onmouseout=function () {
+            run();
+        };
+        function run() {
+            timer=setInterval(function () {
+                oNextBtn.onclick();
+            },1000);
+        }
+</script>
+</body>
+</html>

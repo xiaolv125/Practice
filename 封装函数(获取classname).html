@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装getElementsByClassName函数</title>
+</head>
+<body>
+    <div id="div1">
+        111
+    </div>
+    <ul id="ul1">
+        <li>024</li>
+        <li>034</li>
+        <li>044</li>
+    </ul>
+    <ul id="ul2">
+        <li>014</li>
+        <li>024</li>
+        <li>034</li>
+        <li>044</li>
+    </ul>
+<script>
+    function getEleByClassName(clsName,context) {
+        var result=[];
+        /* if(context){
+         var parentEle=context;
+         }else {
+         var parentEle=document;
+         }
+         var allEle=parentEle.getElementsByTagName('*');*/
+
+        var parentEle=context||document;
+        var allEle=parentEle.getElementsByTagName('*');
+        for(var i=0;i<allEle.length;i++){
+            var arr=allEle[i].className.split(' ');
+            for(var j=0;j<arr.length;j++){
+                if(arr[j]==clsName){
+                    result.push(allEle[i]);
+                }
+            }
+        }
+        return result;
+    }
+    var oUl1=document.getElementById('ul1');
+    var aA=getEleByClassName('aa',oUl1);
+    for(var j=0;j<aA.length;j++){
+        aA[j].style.background='red';
+    }
+</script>
+</body>
+</html>

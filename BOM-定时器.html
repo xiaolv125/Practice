@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num=0;
+    var timer=setInterval(function () {//无限调用function
+        num++;
+        console.log(Math.random());
+        console.log(num);
+        if(num==10){
+            clearInterval(timer);
+        }
+    },500)
+    var num1=0;
+    var timer1=setTimeout(function () {//只调用一次function
+        num1++;
+        console.log(Math.random());
+        console.log(num1);
+        if(num1==10){
+            clearTimeout(timer1);
+        }
+    },500)
+</script>
+</body>
+</html>

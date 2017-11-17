@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <ul>
+        <li>11</li>
+        <li class="aa">22</li>
+        <li>33</li>
+        <li class="aa" id="li1">44</li>
+    </ul>
+    <div id="div2"></div>
+<script>
+    // 封装函数 next()
+    // 用.nextSibling()方法 取下一个元素节点
+    var oLi=document.getElementById("div1");
+    function next(elem) {
+        do{
+            elem=elem.nextSibling;
+        }while (elem&&elem.nodeType!=1)
+        return elem;
+    }
+    console.log(next(oLi));
+
+    //封装previous函数
+    //用previousSibling() 取上一个元素节点
+    var oDiv=document.getElementById("div2");
+    function previous(elem1) {
+        do{
+            elem1=elem1.previousSibling;
+        }while (elem1&&elem1.nodeType!=1)
+        return elem1;
+    }
+    console.log(previous(oDiv));
+</script>
+</body>
+</html>

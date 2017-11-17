@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5-5</title>
+</head>
+<body>
+<script>
+//编写一个非递归函数factorial(n)，计算12!-10!的结果。
+
+    /*function factorial(n,m) {
+        var sum=1;
+        var count=1;
+        for(var i=1;i<=n;i++){
+            sum*=i;
+        }
+        for(var j=1;j<=m;j++){
+            count*=j;
+        }
+        return sum-count;
+    }
+    document.write(factorial(12,10));*/
+
+    function factorial1(n) {
+        var sum1=1;
+        for(var k=1;k<=n;k++){
+            sum1*=k;
+        }
+        return sum1;
+    }
+    document.write(factorial1(12)-factorial1(10));
+</script>
+</body>
+</html>

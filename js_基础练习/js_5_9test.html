@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5-9</title>
+</head>
+<body>
+<script>
+    // 利用全局变量和函数，设计模拟幸运数字机游戏。
+    // 设幸运数字为8，每次由计算机随机产生3个1-9之间(包括1和9）的随机数，
+    // 当这3个随机数中有一个数字为8时，就算赢了一次，要求利用函数计算获胜率。
+    var x,y,z,wNum=0,count=0,win,isConfirm=true;
+    function game(){
+        count++;
+        x=Math.floor(Math.random()*9)+1;
+        y=Math.floor(Math.random()*9)+1;
+        z=Math.floor(Math.random()*9)+1;
+        if(x==8||y==8||z==8){
+            wNum++;
+            win="赢";
+        }else{
+            win="输";
+        }
+    }
+    while(isConfirm){//判断confirm是否为真  点击确定时 返回true
+        game();
+        isConfirm=confirm(x+" "+y+ " "+z+"\n"+win+"\n"+"获胜率为："+wNum/count*100+"%");
+    }
+</script>
+</body>
+</html>
