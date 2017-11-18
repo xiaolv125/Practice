@@ -23,9 +23,9 @@
         var oLi=document.getElementsByTagName("li");
 
         oBtn.onclick=function () {
-            var oLi=document.createElement('li');
-            oLi.innerHTML=Math.random();
-            oUl.appendChild(oLi);
+            var aLi=document.createElement('li');
+            aLi.innerHTML=Math.random();
+            oUl.appendChild(aLi);
         }
         //事件委托
         oUl.onclick=function (e) {
