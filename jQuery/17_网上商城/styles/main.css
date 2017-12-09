@@ -816,3 +816,8 @@ ul.rating li.five a:hover {background-position:0 -160px}
   position:absolute;
   display:block;
 }
+#tip{
+    position: absolute;
+    border: 1px solid #000000;
+    background: #ffff00;
+}

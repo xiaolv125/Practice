@@ -23,6 +23,7 @@
         setCookie('mySkin',$skin,10);
     });
     $('#'+$skin).trigger('click');
+
 //子菜单显示
    /* $('.nav>li').on('hover',function () {
         $(this).find('.jnNav').show();
@@ -65,4 +66,22 @@
         clearInterval(timer);
     }).on('mouseout',function(){
         run();
+    });
+
+//最新动态
+    $('.tooltip').on('mouseover',function (e) {
+        this.currTitle=this.title;
+        $('<div id="tip">'+this.currTitle+'</div>').appendTo('body').offset({
+            left:e.pageX+15,
+            top:e.pageY+15
+        });
+        $(this).attr('title','');
+    }).on('mousemove',function (e) {
+        $('#tip').offset({
+            left:e.pageX+15,
+            top:e.pageY+15
+        });
+    }).on("mouseout",function () {
+        $('#tip').remove();
+        $(this).attr('title',this.currTitle);
     });
