@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">dafd</div>
+    <ul>
+        <li>01</li>
+        <li class="aa">02</li>
+        <li>03</li>
+        <li class="aa">04</li>
+    </ul>
+    <script>
+        function $(selector) {
+            if(typeof selector=='string'){
+                if(selector.charAt(0)=='#'){
+                    return document.getElementById(selector.substring(1));
+                }else if(selector.charAt(0)=='.'){
+                    return getEleByClassName(selector.substring(1));
+                }
+            }
+            else if(typeof selector=='function'){
+                addEvent(document,'DOMContentLoaded',selector,false);
+            }
+        }
+        function getEleByClassName(clsName,context) {
+            var result=[];
+            /* if(context){
+             var parentEle=context;
+             }else {
+             var parentEle=document;
+             }
+             var allEle=parentEle.getElementsByTagName('*');*/
+
+            var parentEle=context||document;
+            var allEle=parentEle.getElementsByTagName('*');
+            for(var i=0;i<allEle.length;i++){
+                var arr=allEle[i].className.split(' ');
+                for(var j=0;j<arr.length;j++){
+                    if(arr[j]==clsName){
+                        result.push(allEle[i]);
+                    }
+                }
+            }
+            return result;
+        }
+        function addEvent(elem,type,fn,flag) {
+            if(elem.addEventListener){                      //标准浏览器
+                elem.addEventListener(type,fn,flag);
+            }else{                                          //IE浏览器
+                elem.attachEvent("on"+type,function () {
+                    fn.call(elem);      //默认调用函数时 this指向window
+                })               //当点击时，调用function 将this指向window改为this指向elem
+            }
+        }
+        console.log($('#div1'));
+        console.log($(".aa"));
+
+        /*window.onload(function () {
+            console.log(333);
+        })*/
+        $(function () {
+            console.log(111);
+        })
+        $(function () {
+            console.log(222);
+        })
+
+    </script>
+</body>
+</html>
