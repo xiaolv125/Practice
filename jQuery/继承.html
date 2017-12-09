@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function A(name,age) {
+        this.name=name;
+        this,age=age;
+    }
+    A.prototype,say=function () {
+        console.log('hello...');
+    }
+    function B(name, age) {
+        A.call(this,name,age);
+    }
+
+
+</script>
+</body>
+</html>
