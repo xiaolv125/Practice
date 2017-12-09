@@ -34,6 +34,20 @@
             for(var i=0;i<this.element.length;i++){
                 addEvent(this.element[i],type,fn,false);
             }
+            return this;
+        };
+
+        Jquery.prototype.css=function (str1,str2) {
+            for(var i=0;i<this.element.length;i++){
+                if(typeof str1=='string'&&typeof str2=='string'){
+                    this.element[i].style[str1]=str2;
+                }else if(typeof str1=='object'&&typeof str2=='undefined'){
+                    for(key in str1){
+                        this.element[i].style[key]=str1[key];
+                    }
+                }
+            }
+            return this;
         }
 
         function getEleByClassName(clsName,context) {
@@ -80,6 +94,11 @@
         });
         $('#div1').on('click',function () {
             console.log(1112233);
+        }).css('color','green')
+       // $('.aa').css('background','red');
+        $('.aa').css({
+            background:"blue",
+            color:'white'
         })
     </script>
 </body>
