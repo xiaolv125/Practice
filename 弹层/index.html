@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #mask{
+            background: rgba(0,0,0,0.3);
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            /*display: none;*/
+        }
+        .title{
+            background: #0000ff;
+            color: #000000;
+        }
+        .containner{
+            width: 400px;
+            height: 300px;
+            background: #ffffff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -150px;
+        }
+        .close{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: #eeeeee;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">click</button>
+    <!--<div id="mask">
+        <div class="containner">
+            <div class="title">
+                <h2>aaaaa</h2>
+                <span class="close">x</span>
+            </div>
+            <div class="content">
+                dsfa
+            </div>
+        </div>
+    </div>-->
+</body>
+
+<script src="require.js" data-main="index"></script>
+</html>
