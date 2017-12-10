@@ -85,3 +85,13 @@
         $('#tip').remove();
         $(this).attr('title',this.currTitle);
     });
+
+//选项卡
+    $('#jnBrandTab li a').on('click',function () {
+        $(this).parent().addClass('chos').siblings().removeClass('chos');
+        var $indx=$("#jnBrandTab li a").index(this);
+        var rollWidth=$('#jnBrandList').find('li').outerWidth;
+        rollWidth=rollWidth*4;
+        $('#jnBrandList').animate({left:-rollWidth*$indx},1000);
+
+    })
