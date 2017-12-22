@@ -1,6 +1,9 @@
 /**
- * Created by Administrator on 2017/12/10.
+ * Created by Administrator on 2017/12/22.
  */
-function add(a,b) {
-    return a+b;
-}
+define(function () {
+    function add(x,y) {
+        return x+y;
+    }
+    return add;
+});
