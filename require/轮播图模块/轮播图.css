@@ -10,10 +10,10 @@ ul{
     height: 344px;
     position: relative;
 }
-.carousel-img-box{
+.carousel-img-box img{
     display: none;
 }
-.carousel-img-box.selected{
+.carousel-img-box img.selected{
     display: block;
 }
 .carousel-tab{
