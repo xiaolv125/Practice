@@ -34,7 +34,7 @@
             console.log(this);//this对当前对象的引用
         }
 
-        //在对象中，this指向当前对象
+        //4.在对象中，this指向当前对象
         var cat={
             neme:mini,
             age:3,
@@ -43,6 +43,13 @@
             }
         };
         cat.eat();
+
+        //5.构造函数中 this指向实例化对象
+        function Person(name) {
+            this.name=name;
+        }
+        var person1=new Person('name');//this==>person1
+
     </script>
 </body>
 </html>
