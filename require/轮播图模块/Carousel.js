@@ -18,7 +18,7 @@ define(['jquery'],function ($) {
         var iNow=0;
         var _this=this;
         $.extend(this.defaultOption,option);
-        console.log(this.defaultOption.buttonType);
+        //console.log(this.defaultOption.buttonType);
 
         this.$container.append(this.$imgBox).append(this.$tab)
             .append(this.$prev).append(this.$next);

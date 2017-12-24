@@ -11,5 +11,12 @@ require(['Carousel'],function (Carousel) {
         btnPos:'bottom',//center bottom
         speed:'2000'
     });
+    carousel2.init({
+        selector:'#content2',
+        imgDate:['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'],
+        buttonType:'square',//circle square
+        btnPos:'bottom',//center bottom
+        speed:'1000'
+    });
 
 });
