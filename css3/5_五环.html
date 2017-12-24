@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 690px;
+            position: relative;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            border: 10px solid blue;
+            border-radius:50%;
+            float: left;
+            margin-right: 10px;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            border: 10px solid black;
+            border-radius:50%;
+            float: left;
+            margin-right: 10px;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            border: 10px solid red;
+            border-radius:50%;
+            float: left;
+            margin-right: 10px;
+        }
+        #div4{
+            width: 200px;
+            height: 200px;
+            border: 10px solid yellow;
+            border-radius:50%;
+            float: left;
+            margin-right: 10px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        #div5{
+            width: 200px;
+            height: 200px;
+            border: 10px solid green;
+            border-radius:50%;
+            float: left;
+            margin-right: 10px;
+            position: absolute;
+            top: 100px;
+            left: 330px;
+        }
+        div #div1::after{
+            content: '';
+            width: 200px;
+            height: 200px;
+            border: 10px solid blue;
+            border-bottom-color: transparent;
+            border-radius:50%;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        div #div2::after{
+            content: '';
+            width: 200px;
+            height: 200px;
+            border: 10px solid black;
+            border-left-color: transparent;
+            border-radius:50%;
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 230px;
+        }
+        div #div3::after{
+            content: '';
+            width: 200px;
+            height: 200px;
+            border: 10px solid red;
+            border-left-color: transparent;
+            border-radius:50%;
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 460px;
+        }
+        div #div5::after{
+            content: '';
+            width: 200px;
+            height: 200px;
+            border: 10px solid green;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-radius:50%;
+            z-index: 3;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="div1">
+
+        </div>
+        <div id="div2">
+
+        </div>
+        <div id="div3">
+
+        </div>
+        <div id="div4">
+
+        </div>
+        <div id="div5">
+
+        </div>
+    </div>
+
+</body>
+</html>
