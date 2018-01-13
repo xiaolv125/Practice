@@ -1,17 +1,15 @@
 #works{
     height: 500px;
     background: #e2e7ed;
-    padding-top: 23px;
+    /*padding-top: 23px;*/
 }
 .work-box img{
     display: block;
     float: left;
 }
-.our-works{
-    margin-bottom: 11px;
+.h2-title{
+    padding-top: 20px;
+    padding-bottom: 10px;
     color: #626262;
     font-size: 30px;
-}
-.work-box{
-
 }
