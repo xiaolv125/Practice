@@ -1,0 +1,17 @@
+#works{
+    height: 500px;
+    background: #e2e7ed;
+    padding-top: 23px;
+}
+.work-box img{
+    display: block;
+    float: left;
+}
+.our-works{
+    margin-bottom: 11px;
+    color: #626262;
+    font-size: 30px;
+}
+.work-box{
+
+}
