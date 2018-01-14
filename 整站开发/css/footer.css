@@ -1,0 +1,35 @@
+#footer{
+    height: 176px;
+    background: #31333e;
+}
+.footer-container{
+    position: relative;
+}
+.footer-nav li,#footer.footer-Reserved{
+    font-size: 15px;
+    color: #e2e7ed;
+}
+.footer-nav li{
+    float: left;
+    margin:42px 32px 4px 0;
+    position: relative;
+}
+#footer.footer-Reserved{
+    position: absolute;
+    top: 66px;
+    left: 0;
+}
+.footer-nav .footer-menu::after{
+    content: '';
+    width: 2px;
+    height: 14px;
+    background: #b3b7be;
+    position: absolute;
+    right: -17px;
+    top: 50%;
+    margin-top: -7px;
+}
+.icon-c{
+    font-size: 15px;
+    margin-right: 4px;
+}
