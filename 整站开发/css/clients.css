@@ -1,0 +1,37 @@
+#clients{
+    height: 153px;
+}
+.clients-box{
+    width: 1002px;
+    height: 58px;
+    position: relative;
+}
+.clientsImg-box{
+    padding-left: 54.5px;
+    width: 1002px;
+    height: 58px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.clientsImg-box img{
+    margin-left: 28.5px;
+    margin-right: 28.5px;
+}
+.prev-clients,.next-clients{
+    width: 26px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+}
+.prev-clients{
+    margin-right: 28.5px;
+    left: 0;
+    background: url("../img/icons1.png") 0 0;
+}
+.next-clients{
+    margin-left: 28.5px;
+    right: 0;
+    background: url("../img/icons1.png") -26px 0;
+}

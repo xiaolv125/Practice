@@ -3,10 +3,13 @@
     height: 460px;
     background: #31333e;
 }
-.img-box{
+.ad-box{
+    position: relative;
+}
+.ad-box,.img-box{
     width: 1002px;
     height: 460px;
-    position: relative;
+
 }
 .img-box img{
     display: block;
@@ -14,21 +17,18 @@
     left: 0;
     top: 0;
 }
-.prev{
+.prev,.next{
     width: 34px;
     height: 54px;
-    background: url("../img/icons.png") -37px 0;
     position: absolute;
-    left: 0;
     top: 50%;
     margin-top: -27px;
 }
+.prev{
+    background: url("../img/icons.png") -37px 0;
+    left: 0;
+}
 .next{
-    width: 34px;
-    height: 54px;
     background: url("../img/icons.png") -94px 0;
-    position: absolute;
     right: 0;
-    top: 50%;
-    margin-top: -27px;
 }
