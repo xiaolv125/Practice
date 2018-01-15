@@ -8,7 +8,7 @@
     <button id="btn">随机彩票</button>
     <div id="caipiao"></div>
     <script>
-        var oBtn=document.getElementById('btn');
+        /*var oBtn=document.getElementById('btn');
         var oCaipiao=document.getElementById('caipiao');
         var obj={};
         oBtn.onclick=function () {
@@ -27,10 +27,22 @@
             var hash=location.hash.substring(1);
             if(hash){
                 oCaipiao.innerHTML=obj[hash];
-            }/*else {
+            }/!*else {
                 oCaipiao.innerHTML='';
-            }*/
-        }
+            }*!/
+        }*/
+        var oBtn=document.getElementById('btn');
+        var oCaipiao=document.getElementById('caipiao');
+        oBtn.onclick=function () {
+            var arr=[];
+            for(var i=0;i<7;i++){
+                var num=parseInt(Math.random()*35+1);
+                arr.push(num);
+            }
+            oCaipiao.innerHTML=arr;
+        };
+
+
     </script>
 </body>
 </html>
