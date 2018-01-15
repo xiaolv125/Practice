@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">随机彩票</button>
+    <div id="caipiao"></div>
+    <script>
+        var oBtn=document.getElementById('btn');
+        var oCaipiao=document.getElementById('caipiao');
+        var obj={};
+        oBtn.onclick=function () {
+            var arr=[];
+            var randNum=Math.random();
+            for(var i=0;i<7;i++){
+                var num=parseInt(Math.random()*35+1);
+                arr.push(num);
+
+            }
+            obj[randNum]=arr;
+            oCaipiao.innerHTML=arr;
+            location.hash=randNum;
+        };
+        window.onhashchange=function () {
+            var hash=location.hash.substring(1);
+            if(hash){
+                oCaipiao.innerHTML=obj[hash];
+            }/*else {
+                oCaipiao.innerHTML='';
+            }*/
+        }
+    </script>
+</body>
+</html>
