@@ -45,8 +45,10 @@
     right: 2px;
     top: 45px;
 }
-.picture-box div{
+.picture-box a{
     float: left;
+}
+.picture-box div{
     width: 37px;
     height: 37px;
     border-radius: 1px;
