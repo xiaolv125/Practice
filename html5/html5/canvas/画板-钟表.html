@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: #000;
+        }
+        #cvs{
+            display: block;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cvs" width="400" height="400"></canvas>
+    <script>
+        var oCvs=document.querySelector('#cvs');
+        var oCtx=oCvs.getContext('2d');
+
+        //外圈小刻度
+        for(var i=1;i<=60;i++){
+            oCtx.beginPath();
+            oCtx.moveTo(200,200);
+            oCtx.arc(200,200,100,(Math.PI/30*(i-1)),(Math.PI/30*(i)));
+            oCtx.lineWidth=2;
+            oCtx.stroke();
+        }
+        //覆盖1
+        oCtx.beginPath();
+        oCtx.arc(200,200,92,0,Math.PI*2);
+        oCtx.fillStyle='white';
+        oCtx.fill();
+        oCtx.lineWidth=2;
+        oCtx.strokeStyle='white';
+        oCtx.stroke();
+
+        //内圈大刻度
+        for(var i=1;i<=12;i++){
+            oCtx.beginPath();
+            oCtx.moveTo(200,200);
+            oCtx.arc(200,200,100,(Math.PI/6*(i-1)),(Math.PI/6*(i)));
+            oCtx.lineWidth=2;
+            oCtx.strokeStyle='#000';
+            oCtx.stroke();
+        }
+        //覆盖2
+        oCtx.beginPath();
+        oCtx.arc(200,200,84,0,Math.PI*2);
+        oCtx.fillStyle='white';
+        oCtx.fill();
+        oCtx.lineWidth=2;
+        oCtx.strokeStyle='white';
+        oCtx.stroke();
+
+        function run() {
+            oCtx.clearRect(135,135,130,130);
+            var date=new Date();
+            var second=date.getSeconds();
+            var minute=date.getMinutes()+second/60;
+            var hour=date.getHours()+minute/60;
+
+            //画秒针
+            oCtx.beginPath();
+            oCtx.moveTo(200,200);
+            oCtx.arc(200,200,65,second*Math.PI/30-Math.PI/2,second*Math.PI/30-Math.PI/2);
+            oCtx.lineWidth=2;
+            oCtx.strokeStyle='red';
+            oCtx.stroke();
+
+            //画分针
+            oCtx.beginPath();
+            oCtx.moveTo(200,200);
+            oCtx.arc(200,200,55,minute*Math.PI/30-Math.PI/2,minute*Math.PI/30-Math.PI/2);
+            oCtx.lineWidth=3;
+            oCtx.strokeStyle='green';
+            oCtx.stroke();
+
+            //画时针
+            oCtx.beginPath();
+            oCtx.moveTo(200,200);
+            oCtx.arc(200,200,45,hour*Math.PI/6-Math.PI/2,hour*Math.PI/6-Math.PI/2);
+            oCtx.lineWidth=4;
+            oCtx.strokeStyle='black';
+            oCtx.stroke();
+        }
+        run();
+        setInterval(function () {
+            run();
+        },1000)
+
+
+
+
+
+    </script>
+</body>
+</html>
