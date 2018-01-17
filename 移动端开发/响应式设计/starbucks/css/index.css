@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/*header开始*/
+#header{
+    width: 100%;
+    height: 100px;
+    padding: 0px 15px;
+    position: relative;
+    box-sizing: border-box;
+    border-top:3px solid #f5f5f5;
+}
+.menu_box{
+    float: left;
+    height: 46px;
+    margin:27px 15px;
+}
+.menu_img{
+    width: 40px;
+    height: 25px;
+    padding:5px 5px 0 5px;
+}
+.menu_tex{
+    display: block;
+    width: 40px;
+    height: 21px;
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+.logo{
+    width: 73px;
+    height: 73px;
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    margin-left: -36.5px;
+}
+.user_login{
+    margin:30px 15px 27px 0;
+    float: right;
+    font-size: 12px;
+}
+.user_login span{
+    font-size: 16px;
+    color: #4e4e4e;
+}
+.user_login .xing{
+    float: right;
+}
+.user_login a{
+    font-weight: 700;
+    font-size: 14px;
+    color: #b89f7a;
+}
+.user_login a:hover{
+    color: #967a50;
+}
+@media screen and (max-width: 768px){
+    #header{
+        padding: 0 0px;
+    }
+    .user_login span{
+        font-size: 12px;
+    }
+    .user_login a{
+        font-size: 12px;
+    }
+    .menu_box{
+        margin:27px 15px 27px 10px;
+    }
+}
+/*header结束*/
+/*ad开始*/
+.img_box{
+    width: 100%;
+    position: relative;
+}
+.img_box img{
+    width: 100%;
+    display: block;
+}
+.img_box .img_mobile{
+    display: none;
+}
+.sp1{
+    background: #47474A;
+    position: absolute;
+    top: 120px;
+    right: 32px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 900;
+    padding:0 5px;
+}
+.more{
+    display: block;
+    position: absolute;
+    font-size: 18px;
+    right: 25px;
+    bottom: 20px;
+    text-align: center;
+    top: auto;
+    color: #FFF;
+}
+@media screen and (max-width: 991px){
+   .img_box .img_mobile{
+        width: 100%;
+        display: block;
+    }
+    .img_box .img_pc{
+        display: none;
+    }
+    .more{
+        font-size: 14px;
+        bottom: 0px;
+        left: auto;
+        margin: 0px;
+        right: 15px;
+        top: auto;
+        width: auto;
+    }
+}
+/*ad结束*/
+/*rewards开始*/
+#rewards-mark{
+    height: 220px;
+    background: #0F0F0F;
+}
+.container{
+    width: 970px;
+    height: 220px;
+    margin:0 auto;
+    padding: 0 15px;
+}
+.rewards_box{
+
+    height: 220px;
+    margin:0 auto;
+}
+.rewards_left,.rewards_right{
+    float: left;
+}
+.rewards_left{
+    width: 350px;
+    height: 220px;
+    padding-left: 90px;
+    background: url("../img/rewards_bg.png") 0 0 no-repeat;
+    background-size: contain;
+    position: relative;
+}
+.rewards_left .rewards_left1{
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+}
+.rewards_left p{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom:0;
+    font-weight: 400;
+}
+.rewards-mark-logo{
+    width: 160px;
+    height:38.5185185185px;
+    background: url("../img/rewards_logo_20170209.svg") 0 0 no-repeat;
+    background-size: contain;
+}
+.rewards_right{
+    width: 430px;
+    height: 220px;
+    display: block;
+    position: relative;
+}
+.rewards_right .rewards_right1{
+    position: absolute;
+    top: 50%;
+    margin-top: -61.5px;
+}
+.rewards_rp1{
+    font-size: 25px;
+    color: #fff;
+}
+.rewards_rp2{
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.rewards_right button{
+    width: 114px;
+    height: 50px;
+    border: 2px solid #a98e67;
+    color: #a98e67;
+    background: transparent;
+    margin:7px 14px 7px 0;
+    padding:14px 40px;
+}
+.rewards_right a{
+    margin-left: 30px;
+    color: #b89f7a;
+    font-size: 14px;
+}
+/*@media screen and (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}*/
+/*rewards结束*/
