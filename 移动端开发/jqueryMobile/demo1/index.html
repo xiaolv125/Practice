@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../jquery.mobile-1.4.5.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        #img_box{
+            width: 100%;
+            height: 100%;
+            /*background: #000;*/
+
+        }
+        #container{
+            display: block;
+            height: 100%;
+            overflow: hidden;
+        }
+        .big{
+            display: none;
+        }
+        .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="img_box">
+
+    </div>
+    <div id="container">
+
+    </div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script src="../jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        var oImgBox=document.querySelector("#img_box");
+        var oContainer=document.querySelector("#container");
+        //加载小图
+        for(var i=1; i<=24; i++) {
+            var oImg = new Image();
+            oImg.src = 'img/thumbs/' + i + '.jpg';
+            oImg.className="small";
+            oImg.style.width="24%";
+            oImg.style.margin="0 1% 1% 0";
+            oImgBox.append(oImg);
+        }
+        //加载大图
+        for(var i=1; i<=24; i++) {
+            var oImg = new Image();
+            oImg.src = 'img/' + i + '.jpg';
+            oImg.className="big";
+            oImg.style.width="100%";
+            oImg.style.margin="50% 0";
+            oContainer.append(oImg);
+        }
+        $('.small').on("tap",function () {
+            idx=$(this).index();
+            $("#img_box").hide();
+            $('.big').eq(idx).css('display','block');
+        });
+        function run1() {
+            $('.big').eq(idx).css('display','none');
+            if(idx==23){
+                idx=-1;
+            }
+            $('.big').eq(idx+1).css('display','block');
+            idx++;
+            return idx;
+        };
+        function run2() {
+            $('.big').eq(idx).css('display','none');
+            if(idx==0){
+                idx=24;
+            }
+            $('.big').eq(idx-1).css('display','block');
+            idx--;
+            return idx;
+        };
+        $('.big').on('swipeleft',function () {
+            run1();
+        });
+        $('.big').on('swiperight',function () {
+            run2();
+        });
+    </script>
+
+
+</body>
+</html>
