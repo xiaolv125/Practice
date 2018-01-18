@@ -181,7 +181,7 @@ html,body{
     background-size: contain;
 }
 .rewards_right{
-    width: 430px;
+
     height: 220px;
     display: block;
     position: relative;
@@ -214,9 +214,9 @@ html,body{
     color: #b89f7a;
     font-size: 14px;
 }
-/*@media screen and (min-width: 768px){
+@media screen and (min-width: 768px){
     .container{
         width: 750px;
     }
-}*/
+}
 /*rewards结束*/
