@@ -183,7 +183,11 @@ html,body{
     height: 220px;
     /*!*display: block;*!*/
     float: left;
-
+}
+.login:hover,.sign:hover{
+    color: #ffffff;
+    background: #a98e67;
+    border-color: #a98e67;
 }
 @media screen and (min-width: 768px) {
     .rewards_right .rewards_right1{
@@ -273,3 +277,71 @@ html,body{
     }
 }
 /*rewards结束*/
+/*app开始*/
+#app{
+    width: 100%;
+    background-color: #EFEBE8;
+    position: relative;
+}
+.app-img{
+    width: 100%;
+}
+.app_download{
+    position: absolute;
+    left: 42%;
+    top:50%;
+    margin-top:-65px;
+}
+.app_qr{
+    width: 130px;
+    height: 130px;
+}
+.content{
+    height: 100px;
+    width: 35%;
+    position: absolute;
+    left: 44%;
+    top:50%;
+    margin-top:-50px;
+    margin-left:130px;
+    -webkit-transform:translate(130px 0);
+}
+.content p{
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 14px;
+    color: #3d3d3d;
+}
+.content a{
+    font-size: 16px;
+    color: #b89f7a;
+}
+.content a:hover{
+    color:#967a50;
+    text-decoration: underline;
+}
+.content1 p{
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 14px;
+    color: #3d3d3d;
+    display: block;
+    padding: 4%;
+    text-align: center;
+}
+.content1 a{
+    font-size: 16px;
+    color: #b89f7a;
+    display: block;
+    text-align: center;
+}
+.content1 a:hover{
+    color:#967a50;
+    text-decoration: underline;
+}
+@media screen and (max-width:767px){
+    .app_pc{
+        display: none;
+    }
+}
+/*app结束*/
