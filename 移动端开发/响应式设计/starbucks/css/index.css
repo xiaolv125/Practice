@@ -339,9 +339,19 @@ html,body{
     color:#967a50;
     text-decoration: underline;
 }
+.app_btn a{
+    width: 220px;
+    height: 80px;
+
+    background: url("../img/udp-starbucks-cn.svg") center center no-repeat;
+    padding:14px 10%;
+    margin: 7px 14px 7px;
+    text-align: center;
+}
 @media screen and (max-width:767px){
     .app_pc{
         display: none;
+
     }
 }
 /*app结束*/
