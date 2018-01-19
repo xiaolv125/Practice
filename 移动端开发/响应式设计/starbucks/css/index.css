@@ -348,6 +348,12 @@ html,body{
     margin: 7px 14px 7px;
     text-align: center;
 }
+@media screen and (min-width:767px){
+    .app_mobile{
+        display: none;
+
+    }
+}
 @media screen and (max-width:767px){
     .app_pc{
         display: none;
