@@ -76,7 +76,7 @@
             $('.big').eq(idx+1).css('display','block');
             idx++;
             return idx;
-        };
+        }
         function run2() {
             $('.big').eq(idx).css('display','none');
             if(idx==0){
@@ -85,7 +85,7 @@
             $('.big').eq(idx-1).css('display','block');
             idx--;
             return idx;
-        };
+        }
         $('.big').on('swipeleft',function () {
             run1();
         });
