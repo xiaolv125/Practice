@@ -367,20 +367,20 @@ html,body{
 /*app结束*/
 
 /*mosaic开始*/
-.mosaic{
+#mosaic{
     width: 100%;
+    display: flex;
 }
-.tm{
+.tm,.ft{
+    width: 100%;
+    display: block;
     position: relative;
 }
-.tm-img{
-    width: 50%;
+.tm-img,.ft-img{
+    width: 100%;
+    display: block;
 }
-.ft-img{
-    width: 50%;
-    float: right;
-}
-.tm h2{
+.tm h2,.ft h2{
     position: absolute;
     bottom: 40px;
     width: 100%;
@@ -389,7 +389,7 @@ html,body{
     padding:0 10%;
     box-sizing: border-box;
 }
-.tm h3{
+.tm h3,.ft h3{
     position: absolute;
     bottom: 10px;
     width:100%;
@@ -410,15 +410,53 @@ html,body{
     line-height: 22px;
     letter-spacing: 2px;
 }
+.ft-img-title{
+    color: #fffffe;
+    font-size: 30px;
+    font-weight: 400;
+}
+.ft-img-store{
+     color: #a98e67;
+     font-size: 13px;
+     font-weight: 900;
+     line-height: 22px;
+     letter-spacing: 2px;
+ }
 @media screen and (max-width:767px){
-    .tm-img,.ft-img{
-        width: 100%;
+    #mosaic{
+        flex-wrap: wrap;
     }
     .tm h3{
         margin-bottom: 5px;
     }
+    .ft h3{
+        margin-bottom: 5px;
+    }
 }
-
-
-
 /*mosaic结束*/
+#wsg{
+    width: 100%;
+    height: 222px;
+    background: #106e4b;
+}
+.wsg-container{
+    width: 767px;
+}
+.wsg-img1{
+    background: url("../img/wsg-title.png");
+}
+.wsg-img2{
+    background: url("../img/wsg-qrcode.png");
+}
+.wsg-img3{
+    background: url("../img/wsg-cup.png");
+}
+.wsg-img4{
+    background: url("../img/wsg-wording.png");
+}
+/*wsg开始*/
+
+
+
+
+/*wsg结束*/
