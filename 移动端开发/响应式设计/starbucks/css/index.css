@@ -434,28 +434,43 @@ html,body{
     }
 }
 /*mosaic结束*/
+
+
+/*wsg开始*/
 #wsg{
     width: 100%;
-    height: 222px;
+    height:222px;
     background: #106e4b;
 }
 .wsg-container{
     width: 767px;
+    margin:0 auto;
 }
 .wsg-img1{
-    background: url("../img/wsg-title.png");
+    width: 150px;
+    height: 127.5px;
+    background: url("../img/wsg-title.png") center no-repeat;
+    background-size: contain;
 }
 .wsg-img2{
-    background: url("../img/wsg-qrcode.png");
+    width: 150px;
+    height: 150px;
+    background: url("../img/wsg-qrcode.png") center no-repeat;
+    background-size: contain;
+    /*float: right;*/
 }
 .wsg-img3{
-    background: url("../img/wsg-cup.png");
+    width: 150px;
+    height: 162px;
+    background: url("../img/wsg-cup.png") center no-repeat;
+    background-size: contain;
 }
 .wsg-img4{
-    background: url("../img/wsg-wording.png");
+    width: 280px;
+    height: 142.8px;
+    background: url("../img/wsg-wording.png") center no-repeat;
+    background-size: contain;
 }
-/*wsg开始*/
-
 
 
 
