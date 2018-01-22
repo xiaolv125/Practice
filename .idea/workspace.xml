@@ -156,24 +156,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zxPractice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zxPractice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="整站开发" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -333,7 +315,7 @@
       <workItem from="1516364471907" duration="28363000" />
       <workItem from="1516543900886" duration="2318000" />
       <workItem from="1516583443640" duration="270000" />
-      <workItem from="1516592314610" duration="33000" />
+      <workItem from="1516592314610" duration="634000" />
     </task>
     <task id="LOCAL-00043" summary="轮播图模块">
       <created>1514094357910</created>
@@ -682,7 +664,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427076000" />
+    <option name="totallyTimeSpent" value="427677000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
