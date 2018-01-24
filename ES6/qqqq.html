@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // setTimeout(function(){
+    //     console.log(111111);
+    // },100);
+    // let pro=new Promise(function(resolve,reject){
+    //     console.log(222222);
+    //     setTimeout(() => {
+    //         console.log(33333);    
+    //     }, 10);
+    //     reject();
+    // })
+    // pro.then(function(){
+    //     console.log('chenggong')
+    // }).catch(function(){
+    //     console.log(666666666);
+    // })
+
+
+
+
+    //class 继承
+    // function Person(name,age){
+    //     this.name=name;
+    //     this.age=age;
+    // }
+    // Person.prototype.eat=function(){
+    //     console.log('I can eat');
+    // }
+    // function Child(name,age){
+    //     Person.call(this,name,age);
+    // }
+    // Child.prototype=new Person();
+    // let p1=new Person('zhangsan',34);
+    // let c1=new Child('zhangxiaosan',2);
+    // console.log(c1);
+    // console.log(p1);
+    // p1.eat();
+    // c1.eat();
+
+
+
+    //es6 class 继承
+    class Person{
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        say(){
+            console.log("I can say");
+        }
+        static eat(){
+            console.log("I can eat");
+        }
+    }  
+    class Child extends Person{
+        constructor(name,age,school){
+            super(name,age);
+            this.school=school;
+        }
+        cry(){
+            console.log("I can cry");
+        }
+        static grow(){
+            console.log("I can grow");
+        }
+    }
+
+    let p1=new Person("lisi",34);
+    let c1=new Child("lixiaosi",2,"weichuang");
+    p1.say();
+    Person.eat();
+    c1.say();
+    c1.cry();
+    Child.grow();
+    console.log(p1,c1);
+
+    
+    
+    
+    </script>
+
+
+</body>
+</html>
