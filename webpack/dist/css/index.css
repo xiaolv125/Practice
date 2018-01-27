@@ -4,5 +4,7 @@ body{
 img{
     width: 500px;
     height: 500px;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
 }body {
-  background: #ffff00; }
+  background: #f00; }
