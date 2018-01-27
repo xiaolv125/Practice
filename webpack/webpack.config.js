@@ -11,7 +11,9 @@ module.exports={
     output:{
         //打包文件输出的路径
         path:path.resolve(__dirname,'dist'),
-        filename:'[name].js'
+        filename:'[name].js',
+        //
+        publicPath:"http://localhost:8081/"
     },
     //css
     module:{
@@ -32,9 +34,21 @@ module.exports={
                     options:
                         {
                             limit:500,
-                            outputPath:"../images/"
+                            outputPath:"images/"
                         }
                     }]
+            },
+            {
+                test:/\.(htm|html)$/i,
+                use:['html-withimg-loader']
+            },
+            {
+                test:/\.scss$/,
+                //use:['style-loader','css-loader','sass-loader']    打包到js文件里
+                use:ExtractTextPlugin.extract({     //打包成分离的css
+                    fallback:'style-loader',
+                    use:['css-loader','sass-loader']
+                })
             }
         ]
     },

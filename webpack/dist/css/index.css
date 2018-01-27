@@ -1,3 +1,8 @@
 body{
-    background-image: url(../images/0a72db3de3d746974c4418d81b96e22d.jpg);
+    background-image: url(http://localhost:8081/images/0a72db3de3d746974c4418d81b96e22d.jpg);
 }
+img{
+    width: 500px;
+    height: 500px;
+}body {
+  background: #ffff00; }
