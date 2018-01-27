@@ -3,13 +3,17 @@ const devServer=require('webpack-dev-server');
 const HtmlPlugin=require('html-webpack-plugin');
 const ExtractTextPlugin=require('extract-text-webpack-plugin');
 const UglifyJsPlugin=require('uglifyjs-webpack-plugin');
-const glob=require('glob');
-const PurifyCSSPlugin=require('purifycss-webpack');
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const webpack=require('webpack');
+const entry=require('./webpack_config/entry_webpack');
 module.exports={
-    entry:{
+    entry:entry,    //模块化配置
+    //{
         //要打包文件
-        index:'./src/index.js'
-    },
+        //index:'./src/index.js'
+        
+    //},
     output:{
         //打包文件输出的路径
         path:path.resolve(__dirname,'dist'),
@@ -56,6 +60,18 @@ module.exports={
                     fallback:'style-loader',
                     use:['css-loader','sass-loader']
                 })
+            },
+            {
+                test:/\.(js|jsx)$/,
+                use:{
+                    loader:'babel-loader',
+                    options:{
+                        presets:[
+                            'es2015','react'
+                        ]
+                    }
+                },
+                exclude:/node_modules/
             }
         ]
     },
@@ -71,10 +87,21 @@ module.exports={
             chunks:['index']
         }),
         new ExtractTextPlugin('css/index.css'),
-        new UglifyJsPlugin(),
+        //new UglifyJsPlugin(),
         new PurifyCSSPlugin({
-            path:glob.sync(path.join(__dirname,'src/*.html')),
-        })
+            paths:glob.sync(path.join(__dirname,'./src/index.html')),
+        }),
+        new webpack.BannerPlugin('翻版必究！'),
+        new webpack.optimize.CommonsChunkPlugin(
+            {
+                //name对应入口文件中名字
+                name:'jquery',
+                //把文件打包到哪里 输入路径
+                filename:'js/jquery.js',
+                //最小打包的文件模块数
+                chunks:2
+            }
+        )
     ],
     devServer:{
         contentBase:path.resolve(__dirname,'dist'),
