@@ -7,6 +7,7 @@ const glob = require('glob');
 const PurifyCSSPlugin = require('purifycss-webpack');
 const webpack=require('webpack');
 const entry=require('./webpack_config/entry_webpack');
+var CopyWebpackPlugin=require('copy-webpack-plugin');
 module.exports={
     entry:entry,    //模块化配置
     //{
@@ -91,17 +92,26 @@ module.exports={
         new PurifyCSSPlugin({
             paths:glob.sync(path.join(__dirname,'./src/index.html')),
         }),
-        new webpack.BannerPlugin('翻版必究！'),
-        new webpack.optimize.CommonsChunkPlugin(
-            {
+        //new webpack.BannerPlugin('翻版必究！'),
+        new webpack.ProvidePlugin({
+            $:'jquery'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
                 //name对应入口文件中名字
                 name:'jquery',
                 //把文件打包到哪里 输入路径
                 filename:'js/jquery.js',
                 //最小打包的文件模块数
                 chunks:2
-            }
-        )
+        }),
+        new CopyWebpackPlugin([{
+            from:'./src/public',
+            to:'./public'
+        }]),
+        // new CopyPlugin([{
+        //     from:'./src/public',
+        //     to:'./public'
+        // }])
     ],
     devServer:{
         contentBase:path.resolve(__dirname,'dist'),
