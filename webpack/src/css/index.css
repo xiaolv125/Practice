@@ -1,3 +1,20 @@
 body{
-    background-image: url(./../image/bg.jpg);
+    background-image: url(../image/bg.jpg);
+}
+img{
+    width: 500px;
+    height: 500px;
+    transform: rotate(30deg);
+}
+.aa{
+    width: 200px;
+    height: 200px;
+}
+.bb{
+    width: 300px;
+    height: 300px;
+}
+.cc{
+    width: 400px;
+    height: 40px;
 }
