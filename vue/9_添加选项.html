@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model='input' @keyup='fn1()'>
+        <button @click='fn()'>add</button>
+        <ul>
+            <li v-for="obj in arr"
+            @click='change(obj)' :class='{red:obj.isRed}'>{{obj.name}}</li>
+        </ul>
+    </div>
+    
+    <script src='vue.js'></script>
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                input:'',
+                arr:[]
+            },
+            methods:{
+                fn:function(){
+                    var obj={
+                        name:this.input,
+                        isRed:false
+                    }
+                    this.arr.push(obj);   //在arr中推入obj对象
+                    this.arr.sort(function(x,y){     //对其排序
+                        return x.name>y.name            //按字符顺序排列
+                    });
+                    this.input='';
+                },
+                fn1:function(){
+                    var arr1=this.arr.filter(function(val,index,arr){
+                        return val
+                    })
+                },
+                change(obj){
+                    obj.isRed=!obj.isRed;   //取当前isred值 判断是否为红色 取非
+                }
+            }
+        })
+    
+    
+    </script>
+</body>
+</html>
