@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!-- 循环arr数组的每个值和索引 -->
+            <li v-for='(val,index) in arr'>{{val}}---{{index}}</li>
+        </ul>
+        <ul>
+            <!-- 循环student对象的 属性和属性值  -->
+            <li v-for="(val,key) in student">{{key}}:{{val}}</li>
+        </ul>
+
+    </div>
+    <script src='vue.js'></script>
+    <script>
+        var vm=new Vue({
+            // 选定作用域
+            el:'#app',
+            data:{
+                arr:['a','b','c','d'],
+                student:{
+                    name:'zs',
+                    sno: 123456,
+                    school: 'weichuang'
+                }
+            }
+        })
+    
+    
+    </script>
+</body>
+</html>

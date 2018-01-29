@@ -8,12 +8,25 @@
 </head>
 <body>
     <div id="app">
-        {{msg}}
+        <!-- v-text 输出整个msg中的内容 不识别标签 -->
+        <div v-text='msg'></div>
+        <!-- v-html 输出msg中内容时  识别标签 -->
+        <div v-html='msg'></div>
+        <input type="text" v-model='msg'>  
     </div>
-    <script src="vue.js"></script>
+    <div id="app2">
+        <div v-text='msg'></div>
+    </div>
+    <script src="vue.js"></script>  
     <script>
         var vm=new Vue({
             el:'#app',
+            data:{
+                msg:'<h1>hello world!</h1>'
+            }
+        })
+        var vm1=new Vue({
+            el:'#app2',
             data:{
                 msg:'hello world!'
             }
