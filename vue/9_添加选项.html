@@ -7,13 +7,13 @@
     <title>Document</title>
     <style>
         .red{
-            background: #ff0000;
+            color: #ff0000;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model='input' @keyup='fn1()'>
+        <input type="text" v-model='input' @keyup='filterArr()'>
         <button @click='fn()'>add</button>
         <ul>
             <li v-for="obj in arr"
@@ -27,24 +27,28 @@
             el:'#app',
             data:{
                 input:'',
-                arr:[]
+                arr:[],
+                newArr:[]
             },
             methods:{
                 fn:function(){
+                    this.arr=this.newArr;
                     var obj={
                         name:this.input,
                         isRed:false
                     }
                     this.arr.push(obj);   //在arr中推入obj对象
+                    //this.newArr=this.arr;
                     this.arr.sort(function(x,y){     //对其排序
                         return x.name>y.name            //按字符顺序排列
                     });
                     this.input='';
                 },
-                fn1:function(){
-                    var arr1=this.arr.filter(function(val,index,arr){
-                        return val
+                filterArr:function(){
+                    var arr1=this.arr.filter((obj)=>{
+                        return obj.name.includes(this.input);
                     })
+                    this.arr=arr1;
                 },
                 change(obj){
                     obj.isRed=!obj.isRed;   //取当前isred值 判断是否为红色 取非
