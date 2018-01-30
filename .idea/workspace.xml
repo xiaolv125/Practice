@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75dcff9f-5ef1-48ec-a7b7-283cad6c9ed0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/购物车/vindex.html" afterPath="$PROJECT_DIR$/vue/购物车/vindex.html" />
-    </list>
+    <list default="true" id="75dcff9f-5ef1-48ec-a7b7-283cad6c9ed0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -34,8 +31,8 @@
       <file leaf-file-name="vindex.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue/购物车/vindex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state relative-caret-position="-532">
+              <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -70,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/require/isArray.js" />
         <option value="$PROJECT_DIR$/Dom/this指向.html" />
         <option value="$PROJECT_DIR$/require/轮播图模块/轮播图.html" />
         <option value="$PROJECT_DIR$/require/轮播图模块/轮播图.css" />
@@ -121,6 +117,7 @@
         <option value="$PROJECT_DIR$/移动端开发/响应式设计/starbucks/index.html" />
         <option value="$PROJECT_DIR$/移动端开发/响应式设计/starbucks/css/index.css" />
         <option value="$PROJECT_DIR$/vue/购物车/index.html" />
+        <option value="$PROJECT_DIR$/vue/购物车/vindex.html" />
       </list>
     </option>
   </component>
@@ -366,7 +363,7 @@
       <workItem from="1516842885325" duration="695000" />
       <workItem from="1516851023201" duration="77000" />
       <workItem from="1517290722787" duration="3283000" />
-      <workItem from="1517298696969" duration="2183000" />
+      <workItem from="1517298696969" duration="2274000" />
     </task>
     <task id="LOCAL-00044" summary="css3案列">
       <created>1514095962791</created>
@@ -715,7 +712,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433915000" />
+    <option name="totallyTimeSpent" value="434006000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -727,7 +724,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="1364" height="728" extended-state="1" />
+    <frame x="1" y="0" width="1364" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17433235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1113,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/购物车/vindex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="-532">
+          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
           <folding />
         </state>
       </provider>
