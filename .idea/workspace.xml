@@ -24,8 +24,10 @@
         <entry file="file://$PROJECT_DIR$/vue/购物车/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
-              <caret line="114" column="16" lean-forward="false" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
-              <folding />
+              <caret line="129" column="16" lean-forward="false" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="16" />
+              <folding>
+                <marker date="1517301194457" expanded="true" signature="2389:4396" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -355,7 +357,7 @@
       <workItem from="1516842885325" duration="695000" />
       <workItem from="1516851023201" duration="77000" />
       <workItem from="1517290722787" duration="3283000" />
-      <workItem from="1517298696969" duration="1553000" />
+      <workItem from="1517298696969" duration="2150000" />
     </task>
     <task id="LOCAL-00044" summary="css3案列">
       <created>1514095962791</created>
@@ -704,7 +706,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433285000" />
+    <option name="totallyTimeSpent" value="433882000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1102,8 +1104,10 @@
     <entry file="file://$PROJECT_DIR$/vue/购物车/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
-          <caret line="114" column="16" lean-forward="false" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
-          <folding />
+          <caret line="129" column="16" lean-forward="false" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="16" />
+          <folding>
+            <marker date="1517301194457" expanded="true" signature="2389:4396" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
