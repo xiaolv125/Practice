@@ -98,9 +98,19 @@
                 $pre.val(sum);
                 var price = $(this).parent().prev().text();
     
-                //改总金额
+                //计算 +的总金额
                 $(this).parent().next().text(price*sum);
                 total();
+            });
+            $('.sub').on("click",function(){
+                var $next=$(this).next();
+                var sum=parseInt($next.val())-1;
+                $next.val(sum);
+                var price=$(this).parent().pre().text();
+                //计算 -的总金额
+                $(this).parent().next().text(price*sum);
+                total();
+
             });
             $(':checkbox').on('click',function(){
                 total();
@@ -112,16 +122,7 @@
                 });
                 $('#total').text(total);
             }
-            $('sub').on("click",function(){
-                var $next=$(this).next();
-                var sum=parseInt($next.val())-1;
-                $next.val=(sum);
-                var price=$(this).parent().pre().text();
-                //计算 -的总金额
-                $(this).parent().next().text(price*sum);
-                total();
-
-            })
+            
 
 
 

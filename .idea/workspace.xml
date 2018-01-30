@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75dcff9f-5ef1-48ec-a7b7-283cad6c9ed0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/购物车/index.html" afterPath="$PROJECT_DIR$/vue/购物车/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,8 +23,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue/购物车/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="99" column="4" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
+            <state relative-caret-position="437">
+              <caret line="114" column="16" lean-forward="false" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -356,7 +355,7 @@
       <workItem from="1516842885325" duration="695000" />
       <workItem from="1516851023201" duration="77000" />
       <workItem from="1517290722787" duration="3283000" />
-      <workItem from="1517298696969" duration="105000" />
+      <workItem from="1517298696969" duration="1553000" />
     </task>
     <task id="LOCAL-00044" summary="css3案列">
       <created>1514095962791</created>
@@ -705,7 +704,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431837000" />
+    <option name="totallyTimeSpent" value="433285000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -717,7 +716,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="1364" height="728" extended-state="1" />
+    <frame x="1" y="0" width="1364" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17433235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1102,8 +1101,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/购物车/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="99" column="4" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
+        <state relative-caret-position="437">
+          <caret line="114" column="16" lean-forward="false" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
           <folding />
         </state>
       </provider>
