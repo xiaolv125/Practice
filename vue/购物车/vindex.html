@@ -33,9 +33,9 @@
                 </tr>
             </thead>
             <tbody id="product-list">
-                <tr v-for='obj in proList'>
+                <tr v-for='(obj,index) in proList'>
                     <td>
-                        <input type="checkbox">
+                        <input type="checkbox" v-model='checkPro' :value="obj">
                     </td>
                     <td>
                         <img :src="obj.productImg" alt="" width="100">
@@ -43,19 +43,19 @@
                     <td>{{obj.productName}}</td>
                     <td>
                         <ul>
-                            <li v-for="obj2 in obj.parts">{{obj2.partsName}}</li>
-                        
+                            <li v-for='obj1 in obj.parts'>{{obj1.partsName}}</li>
+                            
                         </ul>
                     </td>
                     <td class="price">{{obj.productPrice}}</td>
                     <td>
-                        <button @click='sub()' class="sub">-</button>
-                        <input type="text" :value="num">
-                        <button @click='add()' class="add">+</button>
+                        <button @click='sub(obj)'class="sub">-</button>
+                        <input type="text" :value="obj.productQuentity">
+                        <button @click='add(obj)' class="add">+</button>
                     </td>
-                    <td class="total-price">{{total-price}}</td>
+                    <td class="total-price">{{obj.productPrice*obj.productQuentity}}</td>
                     <td>
-                        <a href="javascript:;" class="del">删除</a>
+                        <a @click='del(index,obj)'href="javascript:;" class="del">删除</a>
                     </td>
                 </tr>
             </tbody>
@@ -65,7 +65,7 @@
                     </td>
                     <td>
                         总计：
-                        <span id="total">0</span>
+                        <span id="total">{{total}}</span>
                     </td>
                     <td>
                         <button>结账</button>
@@ -83,16 +83,32 @@
             el:"#cart",
             data:{
                 proList:[],
-                num:0
+                checkPro:[]
             },
             methods:{
-                sub(){
-                    if(this.num>0){
-                        this.num--;
+                add(obj){
+                    obj.productQuentity++;
+                },
+                sub(obj){
+                    if(obj.productQuentity>0){
+                        obj.productQuentity--;
                     }
                 },
-                add(){
-                    this.num++;
+                del(index,obj){
+                    this.proList.splice(index,1);
+                    this.checkPro.splice(this.checkPro.indexOf(obj),1);
+                }
+            
+            },
+            computed:{
+                total:{
+                    get:function(){
+                        var sum=0;
+                        for(var i=0;i<this.checkPro.length;i++){
+                            sum+=this.checkPro[i].productQuentity*this.checkPro[i].productPrice;
+                        }
+                        return sum;
+                    }
                 }
             },
             beforeCreate:function(){
