@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <demo title="111111" content="232323232323"></demo>    
+        <!-- <demo1 title="111111" content="232323232323"></demo1> -->
+    </div>
+    <div id="app1">
+        <demo1 title="111111" content="232323232323">
+            <h3>我是传值1111</h3>
+            <h3>我是传值1111</h3>
+            <h3>我是传值1111</h3>
+        </demo>
+        <demo1 title="我是title2" content="我是内容2">
+            <h3>我是传值footer2222</h3>
+        </demo1>
+    </div>
+    
+    <script src="vue.js"></script>
+    <script type="text/x-template" id="temp">
+        <div>
+            <h2>{{title}}</h2>
+            <p>{{content}}</p>
+            <div>
+                <span>我是footer</span>
+                <slot>
+                    <span>我是默认footer</span>
+                </slot>
+            </div>
+        </div>
+    
+    </script>
+    <script>
+        Vue.component('demo',{
+            template:'<div><h1>{{title}}</h1><p>{{content}}</p></div>',
+            props:['title','content']
+        });
+        var vm1=new Vue({
+            el:'#app',
+            data:{
+
+            }
+        })
+        var vm=new Vue({
+            el:'#app1',
+            data:{
+
+            },
+            components:{
+                demo1:{
+                    template:'#temp',
+                    props:['title','content']
+                }
+            }
+        })
+    
+    
+    </script>
+</body>
+</html>
