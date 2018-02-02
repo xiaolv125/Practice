@@ -1,6 +1,8 @@
 <template>
     <div>
         <h1>我是subTest1111111</h1>
+        <router-link to='/'>回首页</router-link>
+        <router-view></router-view>
     </div>
 </template>
 
