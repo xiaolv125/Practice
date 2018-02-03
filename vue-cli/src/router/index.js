@@ -4,10 +4,13 @@ import HelloWorld from '@/components/HelloWorld'
 import test1 from '@/components/test1'
 import subTest1 from '@/components/subTest1'
 import subTest2 from '@/components/subTest2'
+import test111 from '@/components/test111'
+import Count from '@/components/Count'
 
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',
@@ -28,6 +31,15 @@ export default new Router({
           component:subTest2,
         }
       ]
+    },
+    {
+      path:'/test111/:name/:age',
+      name:'test111',
+      component:test111
+    },
+    {
+      path:'/count',
+      component:Count
     }
   ]
 })

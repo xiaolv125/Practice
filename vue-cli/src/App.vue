@@ -3,6 +3,8 @@
     <img src="./assets/logo.png">
     <router-link to="/">首页</router-link>
     <router-link to="/test/">test1</router-link>
+    <!-- <router-link :to='{name:"test111",params:{name:"zhangs",age:23}}'>test111</router-link> -->
+    <router-link to='test111/zs/23'>test111</router-link>
     <router-view/>
   </div>
 </template>
