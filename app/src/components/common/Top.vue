@@ -1,8 +1,8 @@
 <template>
-    <div class="com-top">
-        <span class="com-top-btn">首页</span>
+    <div class="com-top" :style="{background:$store.state.bgColor}">
+        <router-link to ='/'><span class="com-top-btn">首页</span></router-link>
         <h2>
-            Movie
+            {{$store.state.title}}
         </h2>
     </div>
 </template>
@@ -21,7 +21,9 @@
         top:0;
         left: 0;
         width: 100%;
-
+    }
+    .com-top h2{
+        font-size: 0.6rem;
     }
     .com-top-btn{
         color: #fff;
@@ -29,6 +31,7 @@
         left:0.2rem;
         top:50%;
         transform: translateY(-50%);
+        font-size: 0.28rem;
     }
     .com-top h2{
         line-height: 1rem;

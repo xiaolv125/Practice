@@ -1,5 +1,5 @@
 <template>
-    <ul class="com-bottom">
+    <ul class="com-bottom" :style="{background:$store.state.bgColor}">
         <li><router-link to="/">电影</router-link></li>
         <li><router-link to="/musicList">音乐</router-link></li>
         <li><router-link to="/bookList">书籍</router-link></li>
@@ -32,6 +32,7 @@
     .com-bottom li a{
         color: #ccc;
         outline: none;
+        font-size: 0.28rem;
     }
     .com-bottom li a.router-link-exact-active{
         color: #ffffff;

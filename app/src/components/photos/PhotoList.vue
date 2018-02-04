@@ -12,7 +12,9 @@
 <script>
     
     export default {
-
+        mounted:function(){
+            this.$store.commit("change",{bgColor:"rgb(32, 200, 32)",title:"Photo"});
+        }
         
     }
 </script>
