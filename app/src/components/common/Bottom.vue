@@ -31,6 +31,10 @@
     }
     .com-bottom li a{
         color: #ccc;
+        outline: none;
+    }
+    .com-bottom li a.router-link-exact-active{
+        color: #ffffff;
     }
 
 
