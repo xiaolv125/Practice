@@ -5,6 +5,7 @@
             <swipe-item class="slide2"><img src="@/assets/images/touyingzi.jpg" alt=""></swipe-item>
             <swipe-item class="slide3"><img src="@/assets/images/zhuifengzheng.jpg" alt=""></swipe-item>
             <swipe-item class="slide4"><img src="@/assets/images/buweijianglai.jpg" alt=""></swipe-item>
+            <!-- <swipe-item class="slide5"></swipe-item> -->
         </swipe>
     </div>
 </template>
@@ -41,7 +42,10 @@ height: 8rem;
   background-image:url('./');
 } */
 /* .slide4 {
-  background-image:url('./@/assets/images/buweijianglai.jpg');
+  background-image:url('./assets/images/buweijianglai.jpg');
+} */
+/* .slide5 {
+  background-image:url('./../../assets/images/buweijianglai.jpg');
 } */
 
 </style>
