@@ -1,14 +1,14 @@
 {
   "musicData": [{
-    "title": "我要你",
-    "author": "老狼",
-    "src": "http://up.mcyt.net/md5/53/OTkwNzUxMQ_Qq4329912.mp3",
-    "musicImgSrc": "http://omratag7g.bkt.clouddn.com/%E6%88%91%E8%A6%81%E4%BD%A0.jpg",
-    "lrc": "lrc/我要你.lrc"
+    "title": "带你去旅行",
+    "author": "校长",
+    "src": "http://sc1.111ttt.cn/2017/1/11/11/304112004168.mp3",
+    "musicImgSrc": "https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=0cfd1a1814178a82da3177f2976a18e8/902397dda144ad34d7596753daa20cf430ad8504.jpg",
+    "lrc": "lrc/带你去旅行.lrc"
   }, {
     "title": "成都",
     "author": "赵雷",
-    "src": "http://sc1.111ttt.com/2016/1/12/04/205041718593.mp3",
+    "src": "http://www.tingge123.com/mp3/2016-09-15/1473940221.mp3",
     "musicImgSrc": "http://p4.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg",
     "lrc": "lrc/成都-赵雷.lrc"
   }, {
@@ -20,7 +20,7 @@
   }, {
     "title": "假如爱有天意",
     "author": "李健",
-    "src": "http://sc1.111ttt.com/2015/1/03/21/96212158145.mp3",
+    "src": "http://sc1.111ttt.cn/2015/1/03/21/96212158145.mp3",
     "musicImgSrc": "http://omratag7g.bkt.clouddn.com/%E6%9D%8E%E5%81%A5.jpg",
     "lrc": "lrc/假如爱有天意.lrc"
   }, {
@@ -35,5 +35,11 @@
     "src": "http://up.mcyt.net/md5/53/OTk1MDE2NA_Qq4329912.mp3",
     "musicImgSrc": "http://p4.music.126.net/lDyytkTaPYVTb1Vpide6AA==/18591642115187138.jpg",
     "lrc": "lrc/刚好遇见你-李玉刚.lrc"
+  },{
+    "title": "远走高飞",
+    "author": "金志文",
+    "src": "http://sc1.111ttt.cn/2017/1/11/11/304112003137.mp3",
+    "musicImgSrc": "https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=d960f3b9ae0f4bfb98dd960662261395/f9198618367adab4118f876581d4b31c8701e4bd.jpg",
+    "lrc": "lrc/远走高飞.lrc"
   }]
 }

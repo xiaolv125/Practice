@@ -26,7 +26,6 @@
                     var obj={title,author,url,pic,lrc};
                     //将重新赋值后的数组推进musicData
                     this.musicData.push(obj);
-                    console.log(this.musicData)
                 }
                 
                 this.isShow=true;
