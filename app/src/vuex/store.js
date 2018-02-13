@@ -7,8 +7,6 @@ const state={
     bgColor:'red',
     title:'',
     photoData:[],
-    
-
 };
 const mutations={
     change(state,{bgColor,title}){
