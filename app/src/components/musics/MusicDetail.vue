@@ -11,7 +11,7 @@
         data() {
             return {
                 musicData:[],
-                isShow:false
+                isShow: false
             }
         },
         mounted(){
