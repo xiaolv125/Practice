@@ -1,0 +1,79 @@
+/* 导航开始 */
+body{
+    font-size:14px;
+    font-family:"微软雅黑";
+    color:#666;	
+}
+*{
+   margin:0;
+   padding:0;
+   list-style:none;
+   }
+#logo a{
+   display:block;
+   widht:100%;
+   height:100%;
+   }
+.wrap{
+   width:980px;
+   margin:0 auto;
+   display:table;
+   }
+#header{
+   width:100%;
+   height:41px;
+   border-bottom:1px solid #e0e0e0;
+   padding-top:9px;
+   }
+#logo{
+   width:155px;
+   height:23px;
+   background:url(../images/iconlist_1.png) no-repeat 0 0;
+   float:left;
+   }
+.hd_right{
+   float:right;
+   }
+#navi,#navi li{
+   float:left;
+   }
+#navi li a{
+   color:#5c5c5c;
+   text-decoration:none;
+   line-height:30px;
+   padding:0 14px 13px;
+   }
+#navi li a:hover,#navi li.current a{
+   border-bottom:3px solid #f05157;
+   }
+.android,.ios{
+   width:86px;
+   height:26px; 
+   float:left;
+   display:block;
+   background:url(../images/iconlist_1.png) no-repeat;
+   margin-left:10px;
+   margin-top:2px;
+   }
+.android{
+   background-position:-180px 0;
+}
+.android:hover{
+   background-position:-290px 0;
+   }
+.ios{
+   background-position:-400px 0;
+   }
+#android{
+   float:left;
+   position:relative;
+   }
+#android_pop{
+   position:absolute;
+   top:42px;
+   width:180px;
+   height:195px;
+   background:url(../images/iconlist_1.png) no-repeat -940px 0;
+   display:none;
+   }
+/* 导航结束 */
